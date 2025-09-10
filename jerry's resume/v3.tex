@@ -1,0 +1,152 @@
+%-------------------------
+% Resume in Latex (Expanded, Times New Roman 9pt)
+%-------------------------
+
+\documentclass[letterpaper, 9pt]{article}
+
+% Packages
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{times}
+
+% Colors
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{text-grey}{gray}{.08}
+
+% Section formatting
+\titleformat{\section}{\bfseries \vspace{-5pt} \raggedright \large}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-5pt}]
+
+% Margins
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.4in}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-1pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small #2} \\
+      \textit{#3} & {\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeProjectHeading}[3]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} | #2 & {\small #3} \\
+    \end{tabular*}\vspace{-2pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Che-Jung (Jerry) Chuang} \\ \vspace{5pt}
+    \small \texttt{571-689-7318} $|$
+    \texttt{jerry102102102@gmail.com} $|$
+    \url{https://www.linkedin.com/in/che-jung-chuang-00886827a} $|$
+    \url{https://github.com/jerry102102102}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Maryland, College Park}{College Park, MD}
+      {M.Eng. in Robotics}{Aug. 2025 -- May 2027 (Projected)}
+        \resumeItemListStart
+          \resumeItem{Coursework: Embedded Systems, ROS2, Reinforcement Learning, Kinematics, Sensor Fusion, Motion Planning}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {National Yang Ming Chiao Tung University (NYCU)}{Hsinchu, Taiwan}
+      {B.S. in Computer Science}{Sep. 2019 -- Jun. 2023}
+        \resumeItemListStart
+          \resumeItem{GPA: 3.7/4.3 (last 60 credits)}
+          \resumeItem{Coursework: Computer Networks, Wireless Networks, Network Programming, Network Architecture \& Implementation, CCNA Training}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------WORK EXPERIENCE-----------
+\section{WORK EXPERIENCE}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {STARK Tech}{Taipei, Taiwan}
+      {Python Engineer}{Mar. 2024 -- Jul. 2025}
+        \resumeItemListStart
+          \resumeItem{Built large-scale real-time recommendation pipeline (Azure EventHub + Databricks DLT + Metarank.io), supporting millions of events/day and powering trending, related, and personalized news feeds.}
+          \resumeItem{Developed and maintained backend services (Nest.js, Prisma, PostgreSQL on Azure) to launch production-ready financial news site \href{https://stock.ltn.com.tw/article}{stock.ltn.com.tw}, including data crawling.}
+          \resumeItem{Led enterprise BI agent project: integrated LLMs with HITL workflows, AST validation, and automated regression tests. Boosted query success by 35\%, cut token usage by 20\%, and launched 1.5 months early.}
+          \resumeItem{Engineered contextual ad-serving system: combined multi-armed bandits (Google Ads API) with NLP-based content–ad relevance scoring. Achieved 20\% CTR lift and reduced wasted spend.}
+          \resumeItem{Designed fresh-produce e-commerce recommender: processed raw SQL purchase logs, shifted features from absolute counts to \textit{deviation-from-average} demand, avoiding over-promotion of staples. Result: homepage-to-cart conversions increased 30\%.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Academia Sinica, Institute of Information Science}{Taipei, Taiwan}
+      {Research Intern}{Jun. 2022 -- Oct. 2022}
+        \resumeItemListStart
+          \resumeItem{Implemented graph-based resource allocation for Social IoT; improved robustness under dynamic topologies by 15\%.}
+          \resumeItem{Contributed to SIoT + Metaverse research: co-authored internal reports, evaluated scalability of distributed algorithms, and built simulation environments for testing.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading{Business Intelligence LLM Platform}{LLM Agents, Prompt Engineering}{Jan. 2024 -- Jul. 2025}
+      \resumeItemListStart
+        \resumeItem{Developed agentic BI assistant integrating text-to-SQL, visualization, and reasoning pipelines for enterprise analytics.}
+        \resumeItem{Integrated HITL + AST validation and automated regression suite to ensure reliability across queries.}
+        \resumeItem{Accelerated delivery by 30\%, improved success rate by 35\%, and reduced cloud costs by 20\%.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading{DQN-based Real-time News Recommendation}{Python, PyTorch, Reinforcement Learning}{Mar. 2024 -- Jul. 2025}
+      \resumeItemListStart
+        \resumeItem{Designed RL-based recommender handling news content churn and cold-start challenges.}
+        \resumeItem{Implemented DQN for ranking, with streaming ETL (EventHub→Databricks DLT) and fallback BM25+Louvain ranking.}
+        \resumeItem{Achieved 20\% CTR increase and 15\% engagement growth; robust against data drift.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading{Smart Meter Anomaly Detection}{Python, Time-series, IoT}{Jan. 2023 -- Jun. 2023}
+      \resumeItemListStart
+        \resumeItem{Built anomaly detection for electricity consumption; engineered ingestion + labeling pipelines for IoT data.}
+        \resumeItem{Applied DTW-based clustering to identify abnormal household patterns with high precision.}
+        \resumeItem{Improved detection efficiency by 25\%; scalable to national smart-grid deployments.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{SKILLS}
+\begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+        \textbf{Languages:} C, C++, Python, SQL \\
+        \textbf{AI/Robotics:} ROS2, NVIDIA Isaac, RL (DQN, PPO), Motion Planning, Control Systems, Sensor Fusion, Kinematics \\
+        \textbf{ML/LLM:} PyTorch, LangChain, LangGraph, PydanticAI, Text-to-SQL, LLM Agent Design \\
+        \textbf{Platforms:} Docker, Kubernetes, Jenkins, Git, Azure, GCP, Linux \\
+        \textbf{Backend:} Node.js, Nest.js, Prisma, PostgreSQL
+    }}
+\end{itemize}
+
+\end{document}
